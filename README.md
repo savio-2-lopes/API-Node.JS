@@ -69,9 +69,6 @@ $ git clone https://github.com/savio-2-lopes/api_node.js.git
 $ cd api_node
 
 # Instale as depedências
-$ yarn install
-
-# ou
 $ npm install
 
 # Rode o comando
