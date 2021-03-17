@@ -90,6 +90,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [Node.js](https://nodejs.org/en/)
 - [Express](https://expressjs.com/pt-br/)
 - [Bcryptjs](https://www.npmjs.com/package/bcryptjs)
+- [JsonWebToken](https://github.com/auth0/node-jsonwebtoken)
 - [Mongo](https://www.mongodb.com/)
 
 <br>
