@@ -53,7 +53,7 @@
 ### Pré-requisitos
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
-[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/), [Insomnia](https://insomnia.rest/download) e o gerenciador de pacotes [Yarn](https://yarnpkg.com/).
+[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/), [Insomnia](https://insomnia.rest/download), o banco de dados [Mongo](https://www.mongodb.com/) e o gerenciador de pacotes [Yarn](https://yarnpkg.com/).
 Além disto é bom ter um editor para trabalhar com o código, como [VSCode](https://code.visualstudio.com/)
 
 <br>
