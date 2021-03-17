@@ -1,5 +1,5 @@
 <h3 align="center">
-    <img alt="ApiNode" title="ApiNode" src="./assets/gif.gif" width="800px" />
+    <img alt="ApiNode" title="ApiNode" src="./assets/1.gif" width="800px" />
 </h3>
 
 <p align="center"> :computer: <strong>Em progresso ...</strong> 🚧</p>
@@ -41,7 +41,7 @@
 ## ⚙️ Progresso
 
 - [x] Estrutura e cadastro
-- [ ] Autenticação
+- [x] Autenticação
 - [ ] Recuperação de senha com NodeMailer
 
 <br>
