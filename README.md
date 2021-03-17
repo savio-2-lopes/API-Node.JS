@@ -29,7 +29,7 @@
 
 ## 💻 Sobre o projeto
 
-:rocket: API utilizando Node.js, Express e o banco de dados Mongo
+:rocket: API Rest utilizando Node.js, Express e o banco de dados Mongo
 
 <br>
 
