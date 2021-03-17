@@ -21,6 +21,8 @@
 ## :pushpin: Índice
 
 - [Sobre](#sobre-o-projeto)
+- [Progresso](#progresso)
+- [Tecnologias](#tecnologia)
 - [Licença](#licenca)
 
 <br>
@@ -30,6 +32,29 @@
 ## 💻 Sobre o projeto
 
 :rocket: API Rest utilizando Node.js, Express e o banco de dados Mongo
+
+<br>
+
+<a id="progresso"></a>
+
+## ⚙️ Progresso
+
+- [x] Estrutura e cadastro
+- [ ] Autenticação
+- [ ] Recuperação de senha com NodeMailer
+
+<br>
+
+<a id="tecnologia"></a>
+
+## 🛠 Tecnologias
+
+As seguintes ferramentas foram usadas na construção do projeto:
+
+- [Node.js](https://nodejs.org/en/)
+- [Express](https://expressjs.com/pt-br/)
+- [Bcryptjs](https://www.npmjs.com/package/bcryptjs)
+- [Mongo](https://www.mongodb.com/)
 
 <br>
 
