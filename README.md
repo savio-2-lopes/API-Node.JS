@@ -22,6 +22,7 @@
 
 - [Sobre](#sobre-o-projeto)
 - [Progresso](#progresso)
+- [Como executar](#executar)
 - [Tecnologias](#tecnologia)
 - [Licença](#licenca)
 
@@ -42,6 +43,44 @@
 - [x] Estrutura e cadastro
 - [ ] Autenticação
 - [ ] Recuperação de senha com NodeMailer
+
+<br>
+
+<a id="executar"></a>
+
+## 🚀 Como executar o projeto
+
+### Pré-requisitos
+
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/), [Insomnia](https://insomnia.rest/download) e o gerenciador de pacotes [Yarn](https://yarnpkg.com/).
+Além disto é bom ter um editor para trabalhar com o código, como [VSCode](https://code.visualstudio.com/)
+
+<br>
+
+#### 🧭 Rodando a API
+
+```bash
+
+# Primeiramente, clone este repositório
+$ git clone https://github.com/savio-2-lopes/api_node.js.git
+
+# Entre na pasta
+$ cd api_node
+
+# Instale as depedências
+$ yarn install
+
+# ou
+$ npm install
+
+# Rode o comando
+$ yarn start
+
+# E teste a API no Insomnia utilizando a url abaixo
+$ http://localhost:3333
+
+```
 
 <br>
 
