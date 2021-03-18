@@ -1,10 +1,10 @@
 module.exports = (req, res, next) => {
     const jwt = require('jsonwebtoken')
-    const authConfig = require('../config/auth.json')
+    const authConfig = require('../../config/auth.json')
     const authHeader = req.headers.authorization;
 
     if (!authHeader)
-        return res.status(401).send({ error: 'Token nçao encontrado' })
+        return res.status(401).send({ error: 'Token nao encontrado' })
 
     const parts = authHeader.split(' ');
 
