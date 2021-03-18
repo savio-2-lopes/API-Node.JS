@@ -42,7 +42,7 @@
 
 - [x] Estrutura e cadastro
 - [x] Autenticação
-- [ ] Recuperação de senha com NodeMailer
+- [x] Recuperação de senha com NodeMailer
 
 <br>
 
@@ -62,7 +62,13 @@ Além disto é bom ter um editor para trabalhar com o código, como [VSCode](htt
 
 ```bash
 
-# Primeiramente, clone este repositório
+# Primeiramente, verifique se o Mono está ativado em sua máquina
+$ sudo systemctl status mongod
+
+# Caso o Mongo não esteja ligado, reinicie
+$ sudo systemctl restart mongod
+
+# Após isso, clone este repositório
 $ git clone https://github.com/savio-2-lopes/api_node.js.git
 
 # Entre na pasta
