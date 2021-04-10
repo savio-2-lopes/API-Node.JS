@@ -1,7 +1,7 @@
 <h3 align="center">
     <img alt="ApiNode" title="ApiNode" src="./assets/1.gif" width="800px" />
 </h3>
-
+ 
 <p align="center"> :computer: <strong>Em progresso ...</strong> 🚧</p>
 
 <p align="center"> 
