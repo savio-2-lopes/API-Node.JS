@@ -24,7 +24,7 @@ router.get('/:projectId', async (req, res) => {
     const project = await (await Project.findById(req.params.projectId)).populate(['user', 'tasks'])
     return res.send({ project })
   } catch (err) {
-    return res.status(400).send({ error: 'Error loading project' })
+    return res.status(400).send({ error: 'Erro para exibir kanbam' })
   }
 })
 
@@ -53,17 +53,20 @@ router.put('/:projectId', async (req, res) => {
       title,
       description
     }, { new: true })
+
     project.task = []
+
     await tasks.remove({ project: project._id })
     await Promise.all(tasks.map(async task => {
       const projectTask = new Task({ ...task, project: project._id })
+
       await projectTask.save()
       project.tasks.push(projectTask)
     }))
     await project.save()
     return res.send({ project })
   } catch (err) {
-    return res.status(400).send({ error: 'Error updating project' })
+    return res.status(400).send({ error: 'Erro para atualizar kanban' })
   }
 })
 
@@ -73,7 +76,7 @@ router.delete('/:projectId', async (req, res) => {
     await Project.findByIdAndRemove(req.params.projectId)
     return res.send()
   } catch (err) {
-    return res.status(400).send({ error: 'Error deleting project' })
+    return res.status(400).send({ error: 'Erro para deletar kanbam' })
   }
 })
 
