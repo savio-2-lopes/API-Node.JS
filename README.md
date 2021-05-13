@@ -1,5 +1,5 @@
 <h3 align="center">
-    <img alt="ApiNode" title="ApiNode" src="./assets/01.gif" width="900px" />
+    <img alt="ApiNode" title="ApiNode" src="./assets/1.gif" width="900px" />
 </h3>
  
 <p align="center"> :computer: <strong>Em progresso ...</strong> 🚧</p>
