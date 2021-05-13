@@ -70,8 +70,8 @@ $ git clone https://github.com/savio-2-lopes/api_node.js.git
 # Entre na pasta
 $ cd api_node
 
-# Instale as depedências
-$ npm install
+# Instale as dependências
+$ yarn
 
 # Rode o comando
 $ yarn start
