@@ -1,0 +1,15 @@
+Adicione os seguintes itens:
+- arquivo
+authToken.json: 
+{
+  "secret": "KEY"
+}
+
+- arquivo
+mailToken.json:
+{
+  "host": "",
+  "port": "",
+  "user": "",
+  "pass": ""
+}
