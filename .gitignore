@@ -2,5 +2,5 @@ node_modules
 yarn.lock
 yarn-error.log
 config
-auth.json
-mail.json
+authToken.json
+mailToken.json
