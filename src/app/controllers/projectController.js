@@ -1,83 +1,79 @@
-const express = require('express')
-const authMiddleware = require('../middlewares/auth')
+const express = require('express');
+const authMiddleware = require('../middlewares/auth');
+const Project = require('../models/Project');
+const Task = require('../models/Task');
 
-const Project = require('../models/Project')
-const Task = require('../models/Task')
+const router = express.Router();
 
-const router = express.Router()
+router.use(authMiddleware);
 
-router.use(authMiddleware)
-
-// Exibindo todos os projetos criados
+// Exibir todos os kanbans
 router.get('/', async (req, res) => {
   try {
-    const projects = await Project.find().populate(['user', 'tasks'])
-    return res.send({ projects })
+    const projects = await Project.find().populate(['user', 'tasks']);
+    return res.send({ projects });
   } catch (err) {
-    return res.status(400).send({ error: 'Erro para carregar projeto' })
+    return res.status(400).send({ error: 'Erro ao exibir os kanbans' });
   }
-})
+});
 
-// Exibindo projeto criado
+// Exibir kanban especifico
 router.get('/:projectId', async (req, res) => {
   try {
-    const project = await (await Project.findById(req.params.projectId)).populate(['user', 'tasks'])
-    return res.send({ project })
+    const project = await Project.findById(req.params.projectId).populate(['user', 'tasks']);
+    return res.send({ project });
   } catch (err) {
-    return res.status(400).send({ error: 'Erro para exibir kanbam' })
+    return res.status(400).send({ error: 'Erro ao exibir kanbam' });
   }
-})
+});
 
-// Criando novo projeto
+// Cadastrar novo kanban
 router.post('/', async (req, res) => {
   try {
-    const { title, description, tasks } = req.body
-    const project = await Project.create({ title, description, user: req.userId })
+    const { title, description, tasks } = req.body;
+    const project = await Project.create({ title, description, user: req.userId });
     await Promise.all(tasks.map(async task => {
-      const projectTask = new Task({ ...task, project: project._id })
-      await projectTask.save()
-      project.tasks.push(projectTask)
-    }))
-    await project.save()
-    return res.send({ project })
+      const projectTask = new Task({ ...task, project: project._id });
+      await projectTask.save();
+      project.tasks.push(projectTask);
+    }));
+    await project.save();
+    return res.send({ project });
   } catch (err) {
-    return res.status(400).send({ error: 'Erro para criar novo kanbam' })
+    return res.status(400).send({ error: 'Erro ao criar novo kanbam' });
   }
-})
+});
 
-// Atualizando projeto criado
+// Editar kanbam
 router.put('/:projectId', async (req, res) => {
   try {
-    const { title, description, tasks } = req.body
+    const { title, description, tasks } = req.body;
     const project = await Project.findByIdAndUpdate(req.params.projectId, {
       title,
       description
-    }, { new: true })
-
-    project.task = []
-
-    await tasks.remove({ project: project._id })
+    }, { new: true });
+    project.tasks = [];
+    await Task.remove({ project: project._id });
     await Promise.all(tasks.map(async task => {
-      const projectTask = new Task({ ...task, project: project._id })
-
-      await projectTask.save()
-      project.tasks.push(projectTask)
-    }))
-    await project.save()
-    return res.send({ project })
+      const projectTask = new Task({ ...task, project: project._id });
+      await projectTask.save();
+      project.tasks.push(projectTask);
+    }));
+    await project.save();
+    return res.send({ project });
   } catch (err) {
-    return res.status(400).send({ error: 'Erro para atualizar kanban' })
+    return res.status(400).send({ error: 'Erro ao atualizar kanban' });
   }
-})
+});
 
-// Deletando projeto criado
+// Deletar kanban
 router.delete('/:projectId', async (req, res) => {
   try {
-    await Project.findByIdAndRemove(req.params.projectId)
-    return res.send()
+    await Project.findByIdAndRemove(req.params.projectId, { new: true });
+    return res.send();
   } catch (err) {
-    return res.status(400).send({ error: 'Erro para deletar kanbam' })
+    return res.status(400).send({ error: 'Erro ao deletar kanbam' });
   }
-})
+});
 
-module.exports = app => app.use('/projects', router)
+module.exports = app => app.use('/projects', router);
