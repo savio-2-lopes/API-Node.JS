@@ -75,7 +75,7 @@ router.post('/forgot-password', async (req, res) => {
     console.log(token, now);
     mailer.sendMail({
       to: email,
-      from: 'savioaugulopes@gmail.com',
+      from: 'test@gmail.com',
       template: 'auth/forgot_password',
       context: { token }
     }, (err) => {
