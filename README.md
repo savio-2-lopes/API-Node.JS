@@ -21,6 +21,7 @@
 - [Como executar](#executar)
 - [Tecnologias](#tecnologia)
 - [Licença](#licenca)
+- [Agradecimentos](#agradecimento)
 
 <br>
 
@@ -28,7 +29,9 @@
 
 ## 💻 Sobre o projeto
 
-:rocket: API Rest utilizando Node.js, Express e o banco de dados Mongo
+:rocket: API Rest utilizando Node.js, Express e o banco de dados Mongo.
+<br>
+Baseado nas lives disponibilizadas pela [Rocketseat](https://rocketseat.com.br/) 
 
 <br>
 
@@ -102,3 +105,11 @@ As seguintes ferramentas foram usadas na construção do projeto:
 ## :memo: Licença
 
 Este projeto está sob a licença do MIT. Veja a [página de licença](https://opensource.org/licenses/MIT) para mais detalhes.
+
+<br>
+
+<a id="agradecimento"></a>
+
+## 💙 Agradecimentos
+
+Obrigado [Rocketseat](https://rocketseat.com.br/) por disponibilizar esse conteúdo sensacional 🚀.
