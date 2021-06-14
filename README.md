@@ -31,8 +31,6 @@
 
 :rocket: API Rest utilizando Node.js, Express e o banco de dados MongoDB.
 
-<br>
-
 Baseado nas lives disponibilizadas pela [Rocketseat](https://rocketseat.com.br/) 
 
 <br>
